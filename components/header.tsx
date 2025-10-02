@@ -50,7 +50,7 @@ export function Header() {
     <header className="w-full fixed top-0 left-0 right-0 z-50 bg-slate-900">
       {/* Top promo banner */}
       <div className="bg-slate-900 text-white py-1.5 px-4 text-center text-sm">
-        <span className="text-slate-300">Need Help? Call Us: +880 1782-888888</span>
+        <span className="text-slate-300">Need Help? Call Us: +880 1782-######</span>
         <span className="mx-4 hidden sm:inline">|</span>
         <span className="text-yellow-400 block sm:inline">20% off with coupon code : AB72CD</span>
       </div>
@@ -60,7 +60,7 @@ export function Header() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="text-2xl font-bold hover:text-yellow-400 transition-colors">
+            <Link href="/" className="text-2xl md:text-3xl font-bold hover:text-yellow-400 transition-colors">
               NeedProduct
             </Link>
 
@@ -99,11 +99,11 @@ export function Header() {
             </nav>
 
             {/* Desktop Icons */}
-            <div className="hidden md:flex items-center gap-4">
+            <div className="hidden md:flex items-center gap-3">
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-white hover:text-yellow-400 hover:bg-slate-700"
+                className="text-white text-yellow-400 bg-slate-700"
                 onClick={() => setSearchOpen(!searchOpen)}
               >
                 <Search className="h-5 w-5" />
@@ -121,7 +121,7 @@ export function Header() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-white hover:text-yellow-400 hover:bg-slate-700 relative"
+                  className="text-white text-yellow-400 bg-slate-700 relative"
                 >
                   <GitCompare className="h-5 w-5" />
                   {compareCount > 0 && (
@@ -135,7 +135,7 @@ export function Header() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-white hover:text-yellow-400 hover:bg-slate-700 relative"
+                  className="text-white text-yellow-400 bg-slate-700 relative"
                 >
                   <Heart className="h-5 w-5" />
                   {wishlistCount > 0 && (
@@ -149,7 +149,7 @@ export function Header() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-white hover:text-yellow-400 hover:bg-slate-700 relative"
+                  className="text-white text-yellow-400 bg-slate-700 relative"
                 >
                   <ShoppingCart className="h-5 w-5" />
                   {cartCount > 0 && (
@@ -161,20 +161,20 @@ export function Header() {
               </Link>
             </div>
 
-            <div className="flex md:hidden items-center gap-2">
+            <div className="flex md:hidden items-center gap-1.5 px-2">
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-white hover:text-yellow-400 hover:bg-slate-700 rounded-lg"
+                className="text-white text-yellow-400 bg-slate-700 rounded-lg p-1"
                 onClick={() => setSearchOpen(!searchOpen)}
               >
-                <Search className="h-5 w-5" />
+                <Search className="h-4 w-4" />
               </Button>
               <Link href="/request">
                 <Button
                   variant="ghost"
                   size="sm"
-                  className={`text-white hover:text-yellow-400 hover:bg-slate-700 rounded-lg ${pathname === "/request" ? "bg-slate-700 text-yellow-400" : ""}`}
+                  className={`text-white text-yellow-400 bg-slate-700 rounded-lg ${pathname === "/request" ? "bg-slate-700 text-yellow-400" : ""}`}
                 >
                   REQ
                 </Button>
@@ -183,9 +183,9 @@ export function Header() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-white hover:text-yellow-400 hover:bg-slate-700 relative rounded-lg"
+                  className="text-white text-yellow-400 bg-slate-700 relative rounded-lg"
                 >
-                  <ShoppingCart className="h-5 w-5" />
+                  <ShoppingCart className="h-4 w-4" />
                   {cartCount > 0 && (
                     <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center text-[10px]">
                       {cartCount}
@@ -197,10 +197,10 @@ export function Header() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-white hover:text-yellow-400 hover:bg-slate-700 rounded-lg"
+                className="text-white text-yellow-400 bg-slate-700 rounded-lg"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
-                {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                {mobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
               </Button>
             </div>
           </div>
@@ -208,11 +208,11 @@ export function Header() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-slate-800 border-t border-slate-700 shadow-lg">
+        <div className="lg:hidden bg-white border-t border-gray-300 shadow-lg">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
             <Link
               href="/"
-              className={`flex items-center gap-3 hover:text-yellow-400 transition-colors py-3 px-3 rounded-lg hover:bg-slate-700 ${pathname === "/" ? "bg-slate-700 text-yellow-400" : ""}`}
+              className={`font-bold flex items-center gap-3 hover:text-yellow-400 transition-colors py-3 px-3 rounded-lg hover:bg-slate-700 ${pathname === "/" ? "bg-slate-700 text-yellow-400" : ""}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               <span>🏠</span>
@@ -220,7 +220,7 @@ export function Header() {
             </Link>
             <Link
               href="/shop"
-              className={`flex items-center gap-3 hover:text-yellow-400 transition-colors py-3 px-3 rounded-lg hover:bg-slate-700 ${pathname === "/shop" ? "bg-slate-700 text-yellow-400" : ""}`}
+              className={`font-bold flex items-center gap-3 hover:text-yellow-400 transition-colors py-3 px-3 rounded-lg hover:bg-slate-700 ${pathname === "/shop" ? "bg-slate-700 text-yellow-400" : ""}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               <span>🛍️</span>
@@ -228,7 +228,7 @@ export function Header() {
             </Link>
             <Link
               href="/about"
-              className={`flex items-center gap-3 hover:text-yellow-400 transition-colors py-3 px-3 rounded-lg hover:bg-slate-700 ${pathname === "/about" ? "bg-slate-700 text-yellow-400" : ""}`}
+              className={`font-bold flex items-center gap-3 hover:text-yellow-400 transition-colors py-3 px-3 rounded-lg hover:bg-slate-700 ${pathname === "/about" ? "bg-slate-700 text-yellow-400" : ""}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               <span>ℹ️</span>
@@ -236,7 +236,7 @@ export function Header() {
             </Link>
             <Link
               href="/contact"
-              className={`flex items-center gap-3 hover:text-yellow-400 transition-colors py-3 px-3 rounded-lg hover:bg-slate-700 ${pathname === "/contact" ? "bg-slate-700 text-yellow-400" : ""}`}
+              className={`font-bold flex items-center gap-3 hover:text-yellow-400 transition-colors py-3 px-3 rounded-lg hover:bg-slate-700 ${pathname === "/contact" ? "bg-slate-700 text-yellow-400" : ""}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               <span>📞</span>
@@ -245,7 +245,7 @@ export function Header() {
             <div className="border-t border-slate-700 my-2"></div>
             <Link
               href="/wishlist"
-              className={`flex items-center gap-3 hover:text-yellow-400 transition-colors py-3 px-3 rounded-lg hover:bg-slate-700 ${pathname === "/wishlist" ? "bg-slate-700 text-yellow-400" : ""}`}
+              className={`font-bold flex items-center gap-3 hover:text-yellow-400 transition-colors py-3 px-3 rounded-lg hover:bg-slate-700 ${pathname === "/wishlist" ? "bg-slate-700 text-yellow-400" : ""}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               <Heart className="h-5 w-5" />
@@ -258,7 +258,7 @@ export function Header() {
             </Link>
             <Link
               href="/compare"
-              className={`flex items-center gap-3 hover:text-yellow-400 transition-colors py-3 px-3 rounded-lg hover:bg-slate-700 ${pathname === "/compare" ? "bg-slate-700 text-yellow-400" : ""}`}
+              className={`font-bold flex items-center gap-3 hover:text-yellow-400 transition-colors py-3 px-3 rounded-lg hover:bg-slate-700 ${pathname === "/compare" ? "bg-slate-700 text-yellow-400" : ""}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               <GitCompare className="h-5 w-5" />

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Twitter, Instagram } from "lucide-react"
+import { Facebook, Twitter, Instagram, MessageCircle  } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 
@@ -55,9 +55,9 @@ export function Footer() {
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-slate-300">
               <li>123 Business Street, City, Country</li>
-              <li>+880 1782-888888</li>
-              <li>info@needproduct.com</li>
-              <li>Mon - Sat: 9:00 AM - 6:00 PM</li>
+              <li>+880 1782-######</li>
+              <li>needproduct.support@gmail.com</li>
+              <li>Support : 24/7</li>
             </ul>
           </div>
 
@@ -79,27 +79,41 @@ export function Footer() {
         <hr className="border-slate-700 mb-6" />
 
         {/* Social Links */}
-        <div className="flex justify-center gap-6 mb-6">
+       <div className="flex justify-center gap-4 mb-6">
+          {/* Facebook */}
           <Link
             href="#"
             target="_blank"
-            className="text-slate-300 hover:text-yellow-400 transition-colors"
+            className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-md transition-transform transform hover:scale-110"
           >
-            <Facebook className="h-6 w-6" />
+            <Facebook className="h-5 w-5" />
           </Link>
+
+          {/* Twitter */}
           <Link
             href="#"
             target="_blank"
-            className="text-slate-300 hover:text-yellow-400 transition-colors"
+            className="bg-sky-500 hover:bg-sky-600 text-white p-3 rounded-full shadow-md transition-transform transform hover:scale-110"
           >
-            <Twitter className="h-6 w-6" />
+            <Twitter className="h-5 w-5" />
           </Link>
+
+          {/* Instagram */}
           <Link
             href="#"
             target="_blank"
-            className="text-slate-300 hover:text-yellow-400 transition-colors"
+            className="bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 hover:opacity-90 text-white p-3 rounded-full shadow-md transition-transform transform hover:scale-110"
           >
-            <Instagram className="h-6 w-6" />
+            <Instagram className="h-5 w-5" />
+          </Link>
+
+          {/* WhatsApp */}
+          <Link
+            href="#"
+            target="_blank"
+            className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-md transition-transform transform hover:scale-110"
+          >
+            <MessageCircle className="h-5 w-5" />
           </Link>
         </div>
 
@@ -110,11 +124,11 @@ export function Footer() {
           <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-slate-300">
             <span>© 2025 NeedProduct. All rights reserved</span>
             <span className="hidden sm:inline">|</span>
-            <Link href="/privacy" className="hover:text-yellow-400 transition-colors">
+            <Link href="/privacy-policy" className="text-red-500 hover:text-yellow-400 transition-colors">
               Privacy Policy
             </Link>
             <span className="hidden sm:inline">|</span>
-            <Link href="/terms" className="hover:text-yellow-400 transition-colors">
+            <Link href="/terms-of-service" className="text-red-500 hover:text-yellow-400 transition-colors">
               Terms of Service
             </Link>
           </div>

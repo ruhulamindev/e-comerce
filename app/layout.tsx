@@ -7,6 +7,8 @@ import { AuthProvider } from "@/lib/auth-context"
 // import { ThemeProvider } from "@/lib/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import { Footer } from "@/components/footer";
+import { Header } from "@/components/header"  // ✅ Header Import
+
 
 import "./globals.css"
 
@@ -38,6 +40,7 @@ export default function RootLayout({
       <body className={`${spaceGrotesk.variable} ${dmSans.variable} font-sans antialiased`}>
         {/* <ThemeProvider> */}
           <AuthProvider>
+             <Header />
             <Suspense fallback={null}>{children}</Suspense>
              <Footer />
             <Toaster />
