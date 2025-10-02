@@ -1,0 +1,175 @@
+export interface Product {
+  id: string
+  name: string
+  category: string
+  image: string
+  price: number
+  discountPrice: number
+  discount: number
+  rating: number
+  reviews: number
+  description: string
+  inStock: boolean
+  images: string[]
+}
+
+export const products: Product[] = [
+  {
+    id: "1",
+    name: "Apple iPhone 14",
+    category: "ethnic",
+    image: "/green-bottle-ethnic.jpg",
+    price: 999,
+    discountPrice: 799,
+    discount: 20,
+    rating: 4.5,
+    reviews: 128,
+    description:
+      "Experience the latest iPhone with advanced features, stunning display, and powerful performance. Perfect for everyday use and professional photography.",
+    inStock: true,
+    images: [
+      "/green-bottle-ethnic-1.jpg",
+      "/green-bottle-ethnic-2.jpg",
+      "/green-bottle-ethnic-3.jpg",
+      "/green-bottle-ethnic-4.jpg",
+    ],
+  },
+  {
+    id: "2",
+    name: "Programming Course",
+    category: "classic",
+    image: "/green-bottle-classic.jpg",
+    price: 199,
+    discountPrice: 159,
+    discount: 20,
+    rating: 4.8,
+    reviews: 256,
+    description:
+      "Master programming with our comprehensive course. Learn from industry experts and build real-world projects.",
+    inStock: true,
+    images: [
+      "/green-bottle-classic-1.jpg",
+      "/green-bottle-classic-2.jpg",
+      "/green-bottle-classic-3.jpg",
+      "/green-bottle-classic-4.jpg",
+    ],
+  },
+  {
+    id: "3",
+    name: "Dell XPS 13",
+    category: "premium",
+    image: "/green-bottle-premium.jpg",
+    price: 1299,
+    discountPrice: 1039,
+    discount: 20,
+    rating: 4.7,
+    reviews: 89,
+    description:
+      "Ultra-portable laptop with stunning InfinityEdge display and powerful performance for professionals on the go.",
+    inStock: true,
+    images: [
+      "/green-bottle-premium-1.jpg",
+      "/green-bottle-premium-2.jpg",
+      "/green-bottle-premium-3.jpg",
+      "/green-bottle-premium-4.jpg",
+    ],
+  },
+  {
+    id: "4",
+    name: "Modern Chair",
+    category: "modern",
+    image: "/placeholder.svg?height=300&width=300",
+    price: 299,
+    discountPrice: 239,
+    discount: 20,
+    rating: 4.6,
+    reviews: 145,
+    description:
+      "Ergonomic design meets contemporary style. Perfect for home office or living room with premium comfort.",
+    inStock: true,
+    images: [
+      "/placeholder.svg?height=400&width=400",
+      "/placeholder.svg?height=400&width=400",
+      "/placeholder.svg?height=400&width=400",
+      "/placeholder.svg?height=400&width=400",
+    ],
+  },
+  {
+    id: "5",
+    name: "Formal Suit",
+    category: "formal",
+    image: "/placeholder.svg?height=300&width=300",
+    price: 499,
+    discountPrice: 399,
+    discount: 20,
+    rating: 4.9,
+    reviews: 203,
+    description:
+      "Premium tailored suit for business and special occasions. Made from finest materials with impeccable craftsmanship.",
+    inStock: true,
+    images: [
+      "/placeholder.svg?height=400&width=400",
+      "/placeholder.svg?height=400&width=400",
+      "/placeholder.svg?height=400&width=400",
+      "/placeholder.svg?height=400&width=400",
+    ],
+  },
+  {
+    id: "6",
+    name: "Sports Watch",
+    category: "sport",
+    image: "/placeholder.svg?height=300&width=300",
+    price: 399,
+    discountPrice: 319,
+    discount: 20,
+    rating: 4.4,
+    reviews: 167,
+    description:
+      "Track your fitness goals with advanced health monitoring features. Water-resistant and durable for active lifestyles.",
+    inStock: true,
+    images: [
+      "/placeholder.svg?height=400&width=400",
+      "/placeholder.svg?height=400&width=400",
+      "/placeholder.svg?height=400&width=400",
+      "/placeholder.svg?height=400&width=400",
+    ],
+  },
+  {
+    id: "7",
+    name: "Wireless Headphones",
+    category: "ethnic",
+    image: "/placeholder.svg?height=300&width=300",
+    price: 249,
+    discountPrice: 199,
+    discount: 20,
+    rating: 4.7,
+    reviews: 312,
+    description: "Premium sound quality with active noise cancellation. Long battery life and comfortable fit.",
+    inStock: true,
+    images: [
+      "/placeholder.svg?height=400&width=400",
+      "/placeholder.svg?height=400&width=400",
+      "/placeholder.svg?height=400&width=400",
+      "/placeholder.svg?height=400&width=400",
+    ],
+  },
+  {
+    id: "8",
+    name: "Smart Home Hub",
+    category: "classic",
+    image: "/placeholder.svg?height=300&width=300",
+    price: 149,
+    discountPrice: 119,
+    discount: 20,
+    rating: 4.5,
+    reviews: 98,
+    description: "Control your entire smart home from one device. Compatible with all major smart home platforms.",
+    inStock: true,
+    images: [
+      "/placeholder.svg?height=400&width=400",
+      "/placeholder.svg?height=400&width=400",
+      "/placeholder.svg?height=400&width=400",
+      "/placeholder.svg?height=400&width=400",
+    ],
+  },
+]
