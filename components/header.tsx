@@ -58,11 +58,12 @@ export function Header() {
       {/* Main header */}
       <div className="bg-slate-800 text-white">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-3">            {/* Logo */}
             <Link href="/" className="text-2xl md:text-3xl font-bold hover:text-yellow-400 transition-colors">
-              NeedProduct
+              Need Product
             </Link>
+            <hr className="block md:hidden w-full border-t border-slate-600 my-1" />
+
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-8">
@@ -103,7 +104,7 @@ export function Header() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-white text-yellow-400 bg-slate-700"
+                className="text-yellow-400 bg-slate-700"
                 onClick={() => setSearchOpen(!searchOpen)}
               >
                 <Search className="h-5 w-5" />
@@ -121,7 +122,7 @@ export function Header() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-white text-yellow-400 bg-slate-700 relative"
+                  className="text-yellow-400 bg-slate-700 relative"
                 >
                   <GitCompare className="h-5 w-5" />
                   {compareCount > 0 && (
@@ -135,7 +136,7 @@ export function Header() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-white text-yellow-400 bg-slate-700 relative"
+                  className="text-yellow-400 bg-slate-700 relative"
                 >
                   <Heart className="h-5 w-5" />
                   {wishlistCount > 0 && (
@@ -149,7 +150,7 @@ export function Header() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-white text-yellow-400 bg-slate-700 relative"
+                  className="text-yellow-400 bg-slate-700 relative"
                 >
                   <ShoppingCart className="h-5 w-5" />
                   {cartCount > 0 && (
@@ -165,7 +166,7 @@ export function Header() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-white text-yellow-400 bg-slate-700 rounded-lg p-1"
+                className="text-yellow-400 bg-slate-700 rounded-lg p-1"
                 onClick={() => setSearchOpen(!searchOpen)}
               >
                 <Search className="h-4 w-4" />
@@ -174,7 +175,7 @@ export function Header() {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className={`text-white text-yellow-400 bg-slate-700 rounded-lg ${pathname === "/request" ? "bg-slate-700 text-yellow-400" : ""}`}
+                  className={`text-yellow-400 bg-slate-700 rounded-lg ${pathname === "/request" ? "bg-slate-700 text-yellow-400" : ""}`}
                 >
                   REQ
                 </Button>
@@ -183,7 +184,7 @@ export function Header() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-white text-yellow-400 bg-slate-700 relative rounded-lg"
+                  className="text-yellow-400 bg-slate-700 relative rounded-lg"
                 >
                   <ShoppingCart className="h-4 w-4" />
                   {cartCount > 0 && (
@@ -197,7 +198,7 @@ export function Header() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-white text-yellow-400 bg-slate-700 rounded-lg"
+                className="text-yellow-400 bg-slate-700 rounded-lg"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 {mobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}

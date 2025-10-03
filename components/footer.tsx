@@ -123,11 +123,11 @@ export function Footer() {
         <div className="text-center space-y-2">
           <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-slate-300">
             <span>© 2025 NeedProduct. All rights reserved</span>
-            <span className="hidden sm:inline">|</span>
+            <span className="sm:inline">|</span>
             <Link href="/privacy-policy" className="text-red-500 hover:text-yellow-400 transition-colors">
               Privacy Policy
             </Link>
-            <span className="hidden sm:inline">|</span>
+            <span className="sm:inline">|</span>
             <Link href="/terms-of-service" className="text-red-500 hover:text-yellow-400 transition-colors">
               Terms of Service
             </Link>

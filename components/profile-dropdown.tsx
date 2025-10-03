@@ -29,7 +29,7 @@ export function ProfileDropdown() {
       <Button
         variant="ghost"
         size="icon"
-        className="text-white text-yellow-400 bg-slate-700"
+        className="text-yellow-400 bg-slate-700"
         onClick={() => setIsOpen(!isOpen)}
       >
         <User className="h-5 w-5" />
