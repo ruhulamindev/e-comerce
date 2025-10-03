@@ -41,7 +41,11 @@ export default function RootLayout({
         {/* <ThemeProvider> */}
           <AuthProvider>
              <Header />
+
+          {/* Wrapper: Desktop fixed spacing, Mobile extra top space */}
+          <div className="pt-[70px] md:pt-[10px] lg:pt-[0px]">
             <Suspense fallback={null}>{children}</Suspense>
+          </div>            
              <Footer />
             <Toaster />
           </AuthProvider>

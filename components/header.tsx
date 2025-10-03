@@ -58,7 +58,8 @@ export function Header() {
       {/* Main header */}
       <div className="bg-slate-800 text-white">
         <div className="container mx-auto px-4 py-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-3">            {/* Logo */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-3">
+          {/* Logo */}
             <Link href="/" className="text-2xl md:text-3xl font-bold hover:text-yellow-400 transition-colors">
               Need Product
             </Link>
@@ -109,6 +110,15 @@ export function Header() {
               >
                 <Search className="h-5 w-5" />
               </Button>
+                <Link href="/request">
+              <Button
+                variant="ghost"
+                size="sm"
+                className={`text-yellow-400 bg-slate-700 rounded-lg ${pathname === "/request" ? "bg-slate-700 text-yellow-400" : ""}`}
+              >
+                REQ
+              </Button>
+            </Link>
               {/* <Button
                 variant="ghost"
                 size="icon"
@@ -160,6 +170,17 @@ export function Header() {
                   )}
                 </Button>
               </Link>
+              {/* Tablet + Mobile Hamburger for nav links */}
+                <div className="hidden lg:hidden md:flex  items-center gap-2">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-yellow-400 bg-slate-700 rounded-lg p-1"
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                >
+                  {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                </Button>
+              </div>
             </div>
 
             <div className="flex md:hidden items-center gap-1.5 px-2">
@@ -178,6 +199,34 @@ export function Header() {
                   className={`text-yellow-400 bg-slate-700 rounded-lg ${pathname === "/request" ? "bg-slate-700 text-yellow-400" : ""}`}
                 >
                   REQ
+                </Button>
+              </Link>
+              <Link href="/compare">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-yellow-400 bg-slate-700 relative"
+                >
+                  <GitCompare className="h-5 w-5" />
+                  {compareCount > 0 && (
+                    <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                      {compareCount}
+                    </span>
+                  )}
+                </Button>
+              </Link>
+              <Link href="/wishlist">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-yellow-400 bg-slate-700 relative"
+                >
+                  <Heart className="h-5 w-5" />
+                  {wishlistCount > 0 && (
+                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                      {wishlistCount}
+                    </span>
+                  )}
                 </Button>
               </Link>
               <Link href="/cart">
@@ -208,6 +257,7 @@ export function Header() {
         </div>
       </div>
 
+      
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-t border-gray-300 shadow-lg">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">

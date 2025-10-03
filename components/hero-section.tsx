@@ -23,7 +23,7 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative bg-gradient-to-r from-red-700 via-red-600 to-orange-600 text-white py-12 md:py-20 mt-20 md:mt-0">
+    <section className="relative bg-gradient-to-r from-red-700 via-red-600 to-orange-600 text-white py-12 md:py-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8">
           
@@ -38,7 +38,8 @@ export function HeroSection() {
               {/* <h2 className="text-2xl md:text-3xl font-bold">Collection</h2> */}
             </div>
             <Link href="/shop">
-              <Button className="mt-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-6 text-lg font-semibold rounded-md">
+              <Button className="cursor-pointer mt-4 bg-gradient-to-r from-purple-600 to-pink-800 hover:from-purple-700 hover:via-fuchsia-600 hover:to-pink-700
+              text-white px-8 py-6 text-lg font-semibold rounded-md">
                 SHOP NOW
               </Button>
             </Link>

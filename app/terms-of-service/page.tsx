@@ -1,6 +1,6 @@
 export default function TermsOfService() {
   return (
-    <main className="mt-24 max-w-4xl mx-auto py-12 px-6 text-gray-800">
+    <main className="mt-30 max-w-4xl mx-auto py-12 px-6 text-gray-800">
       <h1 className="underline text-4xl font-bold mb-8 text-center text-slate-900">
         Terms of Service
       </h1>

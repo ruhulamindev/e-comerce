@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { Header } from "@/components/header"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -35,7 +34,8 @@ export default function RequestPage() {
       return
     }
 
-    // Process the request
+    // Here you can add backend API call to save request
+
     toast({
       title: "Request Submitted!",
       description: "We'll review your product request and get back to you soon.",
@@ -54,12 +54,12 @@ export default function RequestPage() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-[120px]">
-        <div className="container mx-auto px-4 py-12">
-          <h1 className="text-4xl font-bold mb-8">Product Request</h1>
+      <main className="pt-[140px] pb-16">
+        <div className="container mx-auto px-4 space-y-8">
 
+          {/* Login Required Alert */}
           {!user && (
-            <div className="max-w-2xl mb-6 bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+            <div className="max-w-2xl mx-auto mb-6 bg-yellow-50 border border-yellow-200 rounded-lg p-6">
               <h2 className="text-xl font-bold text-yellow-800 mb-2">Login Required</h2>
               <p className="text-yellow-700 mb-4">
                 You must be logged in to submit a product request. Please{" "}
@@ -81,12 +81,17 @@ export default function RequestPage() {
             </div>
           )}
 
-          <div className="max-w-2xl">
-            <p className="text-lg text-slate-600 mb-8">
-              Can't find what you're looking for? Let us know and we'll do our best to source it for you.
-            </p>
-            <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Page Title */}
+          <div className="max-w-2xl mx-auto text-center">
+            <h1 className="text-4xl font-bold mb-2">Can't find what you're looking for?</h1>
+            <p className="text-lg text-slate-600">Let us know and we'll do our best to source it for you.</p>
+          </div>
+
+          {/* Request Form */}
+          <div className="max-w-2xl mx-auto bg-white shadow-lg rounded-lg p-8">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Your Name *</label>
                 <Input
                   placeholder="Your Name"
                   value={formData.name}
@@ -95,6 +100,7 @@ export default function RequestPage() {
                 />
               </div>
               <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Your Email *</label>
                 <Input
                   type="email"
                   placeholder="Your Email"
@@ -104,6 +110,7 @@ export default function RequestPage() {
                 />
               </div>
               <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Product Name *</label>
                 <Input
                   placeholder="Product Name"
                   value={formData.productName}
@@ -112,6 +119,7 @@ export default function RequestPage() {
                 />
               </div>
               <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Product Category *</label>
                 <Input
                   placeholder="Product Category"
                   value={formData.category}
@@ -120,15 +128,16 @@ export default function RequestPage() {
                 />
               </div>
               <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Product Description and Details *</label>
                 <Textarea
-                  placeholder="Product Description and Details"
+                  placeholder="Provide full details about the product you want us to source"
                   rows={5}
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                   required
                 />
               </div>
-              <Button type="submit" className="w-full bg-green-600 hover:bg-green-700">
+              <Button type="submit" className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold">
                 Submit Request
               </Button>
             </form>
