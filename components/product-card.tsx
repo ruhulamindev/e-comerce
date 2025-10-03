@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { Heart, GitCompare, Star, ShoppingBag } from "lucide-react"
+import { Heart, GitCompare, Star, ShoppingCart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
@@ -97,7 +97,7 @@ export function ProductCard({ product }: ProductCardProps) {
             <Button
               size="icon"
               variant="secondary"
-              className={`h-8 w-8 rounded-full ${isWishlisted ? "bg-red-500 text-white hover:bg-red-600" : "bg-white hover:bg-gray-100"}`}
+              className={`h-8 w-8 rounded-full ${isWishlisted ? "bg-red-500 text-white hover:bg-red-600" : "bg-purple-500 hover:bg-green-500"}`}
               onClick={handleWishlist}
             >
               <Heart className={`h-4 w-4 ${isWishlisted ? "fill-current" : ""}`} />
@@ -105,7 +105,7 @@ export function ProductCard({ product }: ProductCardProps) {
             <Button
               size="icon"
               variant="secondary"
-              className="h-8 w-8 rounded-full bg-white hover:bg-gray-100"
+              className="h-8 w-8 rounded-full bg-purple-500 hover:bg-green-500"
               onClick={handleCompare}
             >
               <GitCompare className="h-4 w-4" />
@@ -126,10 +126,10 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="flex justify-end">
           <Button
             size="sm"
-            className="bg-green-600 hover:bg-green-700 text-white text-xs px-3 py-1 h-auto gap-2"
+            className="bg-green-600 hover:bg-green-700 text-white text-xs px-3 py-1.5 h-auto gap-2"
             onClick={handleAddToCart}
           >
-            <ShoppingBag className="h-3 w-3" />
+            <ShoppingCart className="h-3 w-3" />
             Add to Cart
           </Button>
         </div>

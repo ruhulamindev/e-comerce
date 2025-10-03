@@ -54,7 +54,7 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-slate-300">
-              <li>123 Business Street, City, Country</li>
+              <li>123 Business Street, Rajshahi, Bangladesh</li>
               <li>+880 1782-######</li>
               <li>needproduct.support@gmail.com</li>
               <li>Support : 24/7</li>

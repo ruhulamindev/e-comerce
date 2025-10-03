@@ -6,7 +6,7 @@ import { useAuth } from "@/lib/auth-context"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import { products, type Product } from "@/lib/products-data"
-import { Trash2, ShoppingBag, GitCompare } from "lucide-react"
+import { Trash2, ShoppingCart, GitCompare } from "lucide-react"
 import Link from "next/link"
 
 export default function WishlistPage() {
@@ -124,7 +124,7 @@ export default function WishlistPage() {
                         className="flex-1 bg-green-600 hover:bg-green-700 gap-2"
                         size="sm"
                       >
-                        <ShoppingBag className="h-4 w-4" />
+                        <ShoppingCart className="h-4 w-4" />
                         Add to Cart
                       </Button>
                       <Button

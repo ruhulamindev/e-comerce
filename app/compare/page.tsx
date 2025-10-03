@@ -6,7 +6,7 @@ import { useAuth } from "@/lib/auth-context"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import { products, type Product } from "@/lib/products-data"
-import { X, ShoppingBag, Star } from "lucide-react"
+import { X, ShoppingCart, Star } from "lucide-react"
 import Link from "next/link"
 
 export default function ComparePage() {
@@ -192,7 +192,7 @@ export default function ComparePage() {
                           onClick={() => addToCart(product)}
                           className="w-full bg-green-600 hover:bg-green-700 gap-2"
                         >
-                          <ShoppingBag className="h-4 w-4" />
+                          <ShoppingCart className="h-4 w-4" />
                           Add to Cart
                         </Button>
                       </td>

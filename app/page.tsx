@@ -7,7 +7,7 @@ import { ProductsSection } from "@/components/products-section"
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Header />
+      {/* <Header /> */}
       <main className="pt-[120px]">
         <HeroSection />
         <CategoriesSection />

@@ -67,7 +67,7 @@ export function Header() {
 
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-8">
+            <nav className="hidden lg:flex items-center gap-4">
               <Link
                 href="/"
                 className={`hover:text-yellow-400 transition-colors ${pathname === "/" ? "text-yellow-400" : ""}`}

@@ -3,7 +3,7 @@
 import { Header } from "@/components/header"
 import { Button } from "@/components/ui/button"
 import { products } from "@/lib/products-data"
-import { Heart, GitCompare, ShoppingBag, Star } from "lucide-react"
+import { Heart, GitCompare, ShoppingCart, Star } from "lucide-react"
 import { useState, use } from "react"
 import { useAuth } from "@/lib/auth-context"
 import { useRouter } from "next/navigation"
@@ -173,7 +173,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                   onClick={handleAddToCart}
                   className="w-full bg-green-600 hover:bg-green-700 text-white py-6 text-lg font-semibold gap-2"
                 >
-                  <ShoppingBag className="h-5 w-5" />
+                  <ShoppingCart className="h-5 w-5" />
                   Add to Cart
                 </Button>
 

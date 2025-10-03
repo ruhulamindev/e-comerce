@@ -44,7 +44,7 @@ export default function ContactPage() {
                 <div className="space-y-4 text-slate-700">
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
-                    <p>+880 1782-888888</p>
+                    <p>+880 1782-######</p>
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
@@ -52,11 +52,11 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Address</h3>
-                    <p>123 Business Street, Dhaka, Bangladesh</p>
+                    <p>123 Business Street, Rajshahi, Bangladesh</p>
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Business Hours</h3>
-                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Support : 24/7</p>
                   </div>
                 </div>
               </div>
